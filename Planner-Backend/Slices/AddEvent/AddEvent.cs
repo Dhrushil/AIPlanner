@@ -32,7 +32,7 @@ public class AddEvent
                 description: request.Description,
                 startDate: request.StartDate,
                 endDate: request.EndDate,
-                attendees: request.Attendees,
+                attendees: (request.Attendees ?? Array.Empty<string>()).ToList(),
                 tags: request.Tags
                 );
             
