@@ -31,7 +31,8 @@ public class OnboardUser
                 firstName: request.FirstName,
                 lastName: request.LastName,
                 password: request.Password,
-                phoneNumber: request.PhoneNumber);
+                phoneNumber: request.PhoneNumber,
+                birthDate: DateTime.Now);
             
             await _userRepository.InsertOneAsync(user);
 
